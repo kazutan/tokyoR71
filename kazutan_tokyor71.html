@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>You do not have to wait until processing is complete</title>
+    <meta charset="utf-8">
+    <meta name="author" content="kazutan" />
+    <link href="libs/remark-css/metropolis.css" rel="stylesheet" />
+    <link href="libs/remark-css/metropolis-fonts.css" rel="stylesheet" />
+    <link rel="stylesheet" href="for_xaringan.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# You do not have to wait until processing is complete
+## Introduction of RStudio’s Jobs Pane
+### kazutan
+### 2018/07/15
+
+---
+
+
+
+
+# my profile
+
+.column[
+- Kazuhiro Maeda  
+(前田 和寛)
+- living in Fukuoka
+- @kazutan
+    - twitter
+    - GitHub
+    - Qiita
+]
+
+.column[
+![](pics/user.png)
+
+]
+
+
+---
+
+# What I am struggling to use R...
+
+- In my work, I connect to a database and process large data
+- When I run my script, **it takes a lot of time** to get results
+  - Other scripts can not be executed during execution
+  - Work is not going on, it will cause "Zangyou(残業)"
+  - Anyway, I'm really bored while waiting!
+
+.center[
+.inline[
+![](pics/zangyou.png)
+![](pics/boring.png)
+]
+]
+
+---
+
+# Boring? OK, tubeplayR!
+
+- Enable to play YouTube on **RStudio**
+- `devtools::install_github("kazutan/tubeplayR")`
+- Just run a code `tubeplayR::tubeplay("url")`
+- Available in the following environment:
+    - RStudio Server (Browser)
+    - RStudio Desktop on Mac
+
+.right[
+.inline[
+![](pics/video_frame.png)
+]
+]
+
+---
+
+# tubeplayR
+
+![](pics/tubeplayR.png)
+
+---
+
+# But this isn't an essential solution
+
+- Time to process does not change
+- And attention is paid to the movie, the work itself may be delayed rather than it
+  - In Japanese, "本末転倒"
+
+.center[.font200[What I want is&lt;br/&gt; **"to run the script in parallel"**!]]
+
+---
+
+# OK, let's use RStudio's Jobs Pane!
+
+- New feature of RStudio v1.2
+  - Now available in the **Preview version**
+  - Search on "rstudio preview" with google
+- When you start the Preview version of RStudio, Jobs Pane is displayed as standard
+
+![](pics/jobs_pane0.png)
+
+
+---
+
+# Procedure to run R Script in parallel
+
+1. Write *.R files
+2. activate *.R file tab
+2. Click "Start Job" button
+3. set R Script file and options
+4. start!
+
+.center[.inline[
+![](pics/job_setting.png)
+]
+]
+
+
+---
+
+# processing...done!
+
+.center[
+.inline[
+![](pics/job_processing_stan.png)
+![](pics/job_processing.png)
+]
+]
+
+---
+
+# v1.2(stable) will be comming soon...?
+
+- **This is still under development**
+  - There is much possibility that specification of function will be changed
+  - Also, the behavior of software (including other features) may be unstable
+- Let's try RStudio v1.2!
+  - There are lots of convenient things besides the features introduced today
+  - Please try and feedback!
+
+---
+
+# Enjoy!
+
+### Reference
+
+.font80[
+- About RStudio
+  - Download: https://www.rstudio.com/products/rstudio/download/
+  - Preview: https://www.rstudio.com/products/rstudio/download/preview/
+- Slide (make by "xaringan")
+  - xaringan(GitHub): https://github.com/yihui/xaringan
+- tubeplayR
+  - introduction: https://kazutan.github.io/HijiyamaR6/intro_tubeplayR.html#/
+  - repository: https://github.com/kazutan/tubeplayR
+- Pictures (Copyright © いらすとや)
+  - Web site: https://www.irasutoya.com/
+- All codes of this presentation
+  - GitHub: https://github.com/kazutan/tokyoR71
+]
+
+.right[
+contact: @kazutan(Twitter)
+]
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
+
+<script>
+(function() {
+  var i, text, code, codes = document.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+})();
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

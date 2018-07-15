@@ -1,0 +1,41 @@
+.column:first-of-type {
+  float: left;
+  width: 48%;
+}
+.column:last-of-type {
+  float: right;
+  width: 48%;
+}
+
+img {
+  max-width: 100%;
+  max-height: 50%;
+}
+
+ul, ol {
+  font-size: 100%;
+}
+
+.remark-slide ul li {
+  font-size: 1.5em;
+}
+
+.remark-slide ul li > ul li {
+  font-size: 0.9em;
+}
+
+.remark-slide ol li {
+  font-size: 1.5em;
+}
+
+.inline {
+  display: inline-block;
+  max-height: 300px;
+}
+
+.inline img {
+  max-height: 250px;
+}
+.remark-code-line {
+  word-wrap: break-word;
+}
