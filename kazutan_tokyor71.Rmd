@@ -10,7 +10,6 @@ output:
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
-#    css: [default, metropolis, metropolis-fonts, for_xaringan.css]
     css: [metropolis, metropolis-fonts, for_xaringan.css]
 ---
 
@@ -27,7 +26,6 @@ options(htmltools.dir.version = FALSE)
 - @kazutan
     - twitter
     - GitHub
-    - Qiita
 ]
 
 .column[
@@ -92,7 +90,7 @@ options(htmltools.dir.version = FALSE)
 
 - New feature of RStudio v1.2
   - Now available in the **Preview version**
-  - Search on "rstudio preview" with google
+  - Search on "rstudio preview" at Web
 - When you start the Preview version of RStudio, Jobs Pane is displayed as standard
 
 ![](pics/jobs_pane0.png)
