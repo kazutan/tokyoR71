@@ -26,7 +26,6 @@ options(htmltools.dir.version = FALSE)
 - @kazutan
     - twitter
     - GitHub
-    - Qiita
 ]
 
 .column[
